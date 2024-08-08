@@ -51,10 +51,10 @@ void setup() {
 
 void loop() {
 
-  checkDistance();
+  checkDistance(__);
 }
 
-void checkDistance() {
+void checkDistance(int collision_distance) {
   while (1) {
     long duration, distance;
     digitalWrite(TRIG, LOW);
@@ -71,7 +71,7 @@ void checkDistance() {
     forward();
     
 
-    if (distance <= 30 && distance != 0) {
+    if (distance <= collision_distance && distance != 0) {
       stop();
       delay(500);
       turn_left();
