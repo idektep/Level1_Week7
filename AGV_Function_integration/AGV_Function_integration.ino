@@ -74,8 +74,6 @@ void checkDistance(int collision_distance) {
     if (distance <= collision_distance && distance != 0) {
       stop();
       delay(500);
-      turn_left();
-      delay(200);
       break;
     }
   }
