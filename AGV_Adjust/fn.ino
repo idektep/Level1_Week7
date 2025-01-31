@@ -1,16 +1,17 @@
 void forward() {
-  analogWrite(L_ENA, 220);
-  analogWrite(L_ENB, 220);
-  analogWrite(R_ENA, 220);
-  analogWrite(R_ENB, 220);
-  digitalWrite(MR_IN1, HIGH);
-  digitalWrite(MR_IN2, LOW);
-  digitalWrite(MR_IN3, HIGH);
-  digitalWrite(MR_IN4, LOW);
-  digitalWrite(ML_IN1, HIGH);
-  digitalWrite(ML_IN2, LOW);
-  digitalWrite(ML_IN3, HIGH);
-  digitalWrite(ML_IN4, LOW);
+  analogWrite(BR_ENA, 200); //Pin speed //backright motor Adjust range value 120-255
+  analogWrite(FR_ENB, 200); //Pin speed //frontright motor Adjust range value 120-255
+  analogWrite(BL_ENB, 200); //Pin speed //backleft motor Adjust range value 120-255
+  analogWrite(FL_ENA, 200); //Pin speed //frontleft motor Adjust range value 120-255
+
+  digitalWrite(MR_IN1, HIGH);  //backright motor
+  digitalWrite(MR_IN2, LOW);   //backright motor
+  digitalWrite(MR_IN3, HIGH);  //frontright motor
+  digitalWrite(MR_IN4, LOW);   //frontright motor
+  digitalWrite(ML_IN1, HIGH);  //frontleft motor
+  digitalWrite(ML_IN2, LOW);   //frontleft motor
+  digitalWrite(ML_IN3, HIGH);  //backleft motor
+  digitalWrite(ML_IN4, LOW);   //backleft motor
 }
 
 void backward() {
@@ -50,16 +51,12 @@ void turn_right() {
 }
 
 void stop() {
-  analogWrite(L_ENA, 220);
-  analogWrite(L_ENB, 220);
-  analogWrite(R_ENA, 220);
-  analogWrite(R_ENB, 220);
-  digitalWrite(MR_IN1, LOW);
-  digitalWrite(MR_IN2, LOW);
-  digitalWrite(MR_IN3, LOW);
-  digitalWrite(MR_IN4, LOW);
-  digitalWrite(ML_IN1, LOW);
-  digitalWrite(ML_IN2, LOW);
-  digitalWrite(ML_IN3, LOW);
-  digitalWrite(ML_IN4, LOW);
+  digitalWrite(MR_IN1, LOW);  //backright motor
+  digitalWrite(MR_IN2, LOW);  //backright motor
+  digitalWrite(MR_IN3, LOW);  //frontright motor
+  digitalWrite(MR_IN4, LOW);  //frontright motor
+  digitalWrite(ML_IN1, LOW);  //frontleft motor
+  digitalWrite(ML_IN2, LOW);  //frontleft motor
+  digitalWrite(ML_IN3, LOW);  //backleft motor
+  digitalWrite(ML_IN4, LOW);  //backleft motor
 }
